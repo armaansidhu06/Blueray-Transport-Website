@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Request a Quote - Blueray Transport LTD.</title>
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="quote.css">
+</head>
+
+<body class="quote-page">
+
+<header class="quote-header">
+
+  <div class="quote-logo">
+    <img src="images/Blueray-logo.png" alt="blueraytransport">
+  </div>
+
+  <nav class="quote-nav">
+
+    <button class="quote-menu-toggle" onclick="toggleQuoteMenu()">☰</button>
+
+    <div class="quote-nav-links" id="quoteNavLinks">
+      <button class="quote-close-menu" onclick="toggleQuoteMenu()">×</button>
+
+      <a href="index.html#top" onclick="closeQuoteMenu()">Home</a>
+      <a href="index.html#about" onclick="closeQuoteMenu()">About</a>
+      <a href="index.html#fleet" onclick="closeQuoteMenu()">Fleet</a>
+      <a href="index.html#industries" onclick="closeQuoteMenu()">Industries</a>
+      <a href="index.html#contact" onclick="closeQuoteMenu()">Contact</a>
+    </div>
+
+  </nav>
+
+</header>
+
+<div class="quote-container">
+  <h1>Request an Estimate</h1>
+
+  <form class="quote-form" id="quoteForm">
+
+    <div class="form-group full">
+      <label>Full Name *</label>
+      <input type="text" name="fullName" required>
+    </div>
+
+    <div class="form-group">
+      <label>Phone Number *</label>
+      <input type="tel" name="phone" required>
+    </div>
+
+    <div class="form-group">
+      <label>Email *</label>
+      <input type="email" name="email" required>
+    </div>
+
+    <div class="form-group">
+      <label>Company *</label>
+      <input type="text" name="company" required>
+    </div>
+
+    <div class="form-group">
+      <label>Commodity *</label>
+      <input type="text" name="commodity" required>
+    </div>
+
+    <div class="form-group">
+      <label>Pickup Location *</label>
+      <input type="text" name="pickupLocation" required>
+    </div>
+
+    <div class="form-group">
+      <label>Dropoff Location *</label>
+      <input type="text" name="dropoffLocation" required>
+    </div>
+
+    <div class="form-group">
+      <label>Pickup Date *</label>
+      <input type="date" name="pickupDate" required>
+    </div>
+
+    <div class="form-group">
+      <label>Dropoff Date *</label>
+      <input type="date" name="dropoffDate" required>
+    </div>
+
+    <div class="form-group">
+      <label>Weight (lbs) *</label>
+      <input type="text" name="weight" required>
+    </div>
+
+    <div class="form-group">
+      <label>Length, Width, Height *</label>
+      <input type="text" name="dimensions" required>
+    </div>
+
+    <div class="form-group full">
+      <label>Enter Any Special Requests Here...</label>
+      <textarea name="comments"></textarea>
+    </div>
+
+    <button type="submit" class="quote-submit">Submit Request</button>
+
+  </form>
+</div>
+
+<div class="popup" id="thankYouPopup">
+  <div class="popup-box">
+    <h2>Thank You!</h2>
+    <p>We received your request. We will get back to you as soon as possible.</p>
+    <button onclick="closePopup()">Submit Another Request</button>
+    <button onclick="window.location.href='Main.html'">Back to Home</button>
+  </div>
+</div>
+
+<script>
+const form = document.getElementById("quoteForm");
+const popup = document.getElementById("thankYouPopup");
+
+form.addEventListener("submit", function(e) {
+  e.preventDefault();
+
+  const formData = {
+    fullName: form.fullName.value,
+    phone: form.phone.value,
+    email: form.email.value,
+    company: form.company.value,
+    commodity: form.commodity.value,
+    pickupLocation: form.pickupLocation.value,
+    dropoffLocation: form.dropoffLocation.value,
+    pickupDate: form.pickupDate.value,
+    dropoffDate: form.dropoffDate.value,
+    weight: form.weight.value,
+    dimensions: form.dimensions.value,
+    comments: form.comments.value
+  };
+
+  fetch("https://script.google.com/macros/s/AKfycbzk5yLeZQs4-M5PZZj6Ds5y5hz_K9zKeNkAYzNpYD9lvzAQwxGSIVQzlVbNxDYpklTVAg/exec", {
+    method: "POST",
+    mode: "no-cors",
+    headers: {
+      "Content-Type": "text/plain;charset=utf-8"
+    },
+    body: JSON.stringify(formData)
+  });
+
+  popup.style.display = "flex";
+  form.reset();
+});
+
+function closePopup() {
+  popup.style.display = "none";
+}
+
+function toggleQuoteMenu() {
+  document.getElementById("quoteNavLinks").classList.toggle("active");
+}
+
+function closeQuoteMenu() {
+  document.getElementById("quoteNavLinks").classList.remove("active");
+}
+</script>
+
+</body>
+</html>

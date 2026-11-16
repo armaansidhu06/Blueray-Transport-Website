@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Fleet - Blueray Transport LTD.</title>
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="fleet.css">
+</head>
+
+<body class="fleet-page" id="top">
+
+<div class="container">
+
+  <header class="logo">
+    <img src="images/blueray-logo.png" alt="Blueray Transport LTD.">
+  </header>
+
+  <nav class="nav">
+
+    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+
+    <div class="nav-links" id="navLinks">
+      <button class="close-menu" onclick="toggleMenu()">×</button>
+
+      <a class="nav-bar" href="index.html" onclick="closeMenu()">Home</a>
+      <a class="nav-bar" href="about.html" onclick="closeMenu()">About</a>
+      <a class="nav-bar" href="index.html#fleet" onclick="closeMenu()">Fleet</a>
+      <a class="nav-bar" href="index.html#industries" onclick="closeMenu()">Industries</a>
+      <a class="nav-bar" href="index.html#contact" onclick="closeMenu()">Contact</a>
+
+      <button onclick="window.location.href='quote.html'" class="nav-btn">
+        Get an Estimate
+      </button>
+    </div>
+
+  </nav>
+
+  <main class="fleet-page-content">
+
+    <section class="fleet-gallery">
+
+      <div class="fleet-gallery-grid">
+
+        <div class="fleet-gallery-img">
+          <img src="fleet-images/fleet1.jpg" alt="Blueray Transport Fleet">
+        </div>
+
+        <div class="fleet-gallery-img">
+          <img src="fleet-images/fleet2.jpg" alt="Blueray Transport Fleet">
+        </div>
+
+        <div class="fleet-gallery-img">
+          <img src="fleet-images/fleet4.jpg" alt="Blueray Transport Fleet">
+        </div>
+
+        <div class="fleet-gallery-img">
+          <img src="fleet-images/fleet6.jpg" alt="Blueray Transport Fleet">
+        </div>
+
+        <div class="fleet-gallery-img">
+          <img src="fleet-images/fleet7.jpg" alt="Blueray Transport Fleet">
+        </div>
+
+        <div class="fleet-gallery-img">
+          <img src="fleet-images/fleet8.jpg" alt="Blueray Transport Fleet">
+        </div>
+
+        <div class="fleet-gallery-img">
+          <img src="fleet-images/fleet9.jpg" alt="Blueray Transport Fleet">
+        </div>
+
+        <div class="fleet-gallery-img">
+          <img src="fleet-images/fleet10.jpg" alt="Blueray Transport Fleet">
+        </div>
+
+        <div class="fleet-gallery-img">
+          <img src="fleet-images/fleet11.jpg" alt="Blueray Transport Fleet">
+        </div>
+
+        <div class="fleet-gallery-img">
+          <img src="fleet-images/fleet13.jpg" alt="Blueray Transport Fleet">
+        </div>
+
+        <div class="fleet-gallery-img">
+          <img src="fleet-images/fleet14.jpg" alt="Blueray Transport Fleet">
+        </div>
+
+        <div class="fleet-gallery-img">
+          <img src="fleet-images/fleet15.jpg" alt="Blueray Transport Fleet">
+        </div>
+
+        <div class="fleet-gallery-img">
+          <img src="fleet-images/fleet17.jpg" alt="Blueray Transport Fleet">
+        </div>
+
+        <div class="fleet-gallery-img">
+          <img src="fleet-images/fleet20.jpg" alt="Blueray Transport Fleet">
+        </div>
+
+        <div class="fleet-gallery-img">
+          <img src="fleet-images/fleet21.jpg" alt="Blueray Transport Fleet">
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <footer class="footer">
+
+    <div class="footer1">
+      <img src="images/blueray-logo.png" alt="Blueray Transport LTD.">
+    </div>
+
+    <div class="footer2">
+      <h3>Address</h3>
+
+      <a href="https://www.google.ca/maps/place/2135+Bakerview+St,+Abbotsford,+BC+V2T+3B2/" target="_blank">
+        <p>2135 Bakerview St</p>
+        <p>Abbotsford, BC</p>
+        <p>Canada</p>
+        <p>V2T 3B2</p>
+      </a>
+    </div>
+
+    <div class="footer3">
+      <h3>Contact</h3>
+
+      <p>Phone: <a href="tel:16047580800">+1 604-758-0800</a></p>
+
+      <p>Email: <a href="mailto:info@blueraytransport.ca">info@blueraytransport.ca</a></p>
+    </div>
+
+    <div class="footer4">
+      <h3>Office Hours</h3>
+
+      <p>Mon - Fri: 7:00 AM - 5:00 PM</p>
+      <p>Sat: Closed</p>
+      <p>Sun: Closed</p>
+    </div>
+
+    <div class="copyright">
+      <p>© 2026 Blueray Transport LTD. All Rights Reserved. | Website Designed by Blueray Transport LTD.</p>
+    </div>
+
+  </footer>
+
+</div>
+
+<div class="mobile-contact-bar">
+
+  <a href="tel:16047580800" class="mobile-contact-btn">
+    Call Us
+    <br>☏
+  </a>
+
+  <a href="mailto:info@blueraytransport.ca" class="mobile-contact-btn">
+    Email Us
+    <br>✉︎
+  </a>
+
+</div>
+
+<script>
+function toggleMenu() {
+  document.getElementById("navLinks").classList.toggle("active");
+}
+
+function closeMenu() {
+  document.getElementById("navLinks").classList.remove("active");
+}
+</script>
+
+</body>
+</html>
