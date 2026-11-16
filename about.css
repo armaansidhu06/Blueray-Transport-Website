@@ -68,7 +68,7 @@
   min-height: 100vh;
   padding: 80px 40px;
   overflow: hidden;
-  background: url("../images/about-hero.JPG") center / cover no-repeat;
+  background: url("./images/about-hero.JPG") center / cover no-repeat;
   color: var(--color-white);
   text-align: center;
 }
